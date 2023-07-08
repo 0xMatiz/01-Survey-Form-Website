@@ -1,0 +1,123 @@
+* {
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+:root {
+  --border-color1: blue;
+  --border-color2: white;
+  --border-color3: black;
+  --background-gradient1: linear-gradient(0deg, black, blue, black);
+  --background-gradient2: linear-gradient(45deg, black, blue, black);
+  --background-gradient3: linear-gradient(90deg, black, blue, black);
+  --background-gradient4: linear-gradient(135deg, black, blue, black);
+  --text-color: white;
+}
+
+body {
+  background: var(--background-gradient2);
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  color: var(--text-color);
+  animation: breathe 6s infinite;
+}
+
+@keyframes breathe {
+  0%, 100% {
+    background: var(--background-gradient1);
+  }
+  25% {
+    background: var(--background-gradient2);
+  }
+  50% {
+    background: var(--background-gradient3);
+  }
+  75% {
+    background: var(--background-gradient4);
+  }
+}
+
+.bordered-inside {
+  border: 2px solid var(--border-color2);
+  margin-bottom: 10px;
+}
+
+p {
+  text-align: center;
+}
+
+#title {
+  text-align: center;
+  background: var(--background-gradient1);
+  border: 2px solid var(--border-color2);
+  margin: 25px auto 5px;
+  max-width: 350px;
+  min-width: 200px;
+}
+
+#description {
+  background: var(--background-gradient2);
+  border: 2px solid var(--border-color2);
+  max-width: 350px;
+  min-width: 200px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+form {
+  max-width: 350px;
+  min-width: 200px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+fieldset {
+  border: 2px solid var(--border-color2);
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select#dropdown,
+textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 5px;
+  background-color: black;
+  color: white;
+  border: none;
+  outline: none;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  transition: box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+select#dropdown:focus,
+textarea:focus {
+  box-shadow: 0 0 10px rgba(0, 128, 255, 0.7);
+}
+
+select#dropdown {
+  background: var(--border-color3);
+}
+
+#submit {
+  background: var(--border-color3);
+  border: 2px solid var(--border-color2);
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 16px;
+  padding: 5px 10px;
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+#submit:hover {
+  transform: scale(1.1);
+}
