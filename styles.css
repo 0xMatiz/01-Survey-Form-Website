@@ -7,6 +7,7 @@
   --border-color1: blue;
   --border-color2: white;
   --border-color3: black;
+  --border-color3: rgb(143, 0, 238);
   --background-gradient1: linear-gradient(0deg, black, blue, black);
   --background-gradient2: linear-gradient(45deg, black, blue, black);
   --background-gradient3: linear-gradient(90deg, black, blue, black);
@@ -23,7 +24,7 @@ body {
   animation: breathe 6s infinite;
 }
 
-@keyframes breathe {
+/* @keyframes breathe {
   0%, 100% {
     background: var(--background-gradient1);
   }
@@ -36,7 +37,7 @@ body {
   75% {
     background: var(--background-gradient4);
   }
-}
+} */
 
 .bordered-inside {
   border: 2px solid var(--border-color2);
@@ -120,4 +121,25 @@ select#dropdown {
 
 #submit:hover {
   transform: scale(1.1);
+}
+
+#t-and-c-link {
+  color: var(--border-color3)
+}
+
+header {
+  text-align: center;
+  margin-top: 20px;
+}
+
+h1 {
+  color: var(--text-color);
+}
+
+.container {
+  border: 2px solid white;
+  padding: 10px;
+  max-width: 350px;
+  min-width: 200px;
+  margin: 0 auto;
 }
